@@ -7,9 +7,6 @@ html {
     border-radius: 50%;
 }
 
-#hiBlockText {
-}
-
 .textDecorNav {
     font-size: 2.5rem;
     font-family: "Permanent Marker", cursive;
@@ -38,10 +35,6 @@ html {
 .text-white-bold {
     color: white;
     font-weight: bold;
-}
-
-#sobre {
-    /* text-align: right; */
 }
 
 li {
