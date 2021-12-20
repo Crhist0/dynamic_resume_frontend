@@ -1,0 +1,235 @@
+html {
+    scrollbar-width: thin;
+}
+
+#hiBlockImg {
+    width: 90%;
+    border-radius: 50%;
+}
+
+#hiBlockText {
+}
+
+.textDecorNav {
+    font-size: 2.5rem;
+    font-family: "Permanent Marker", cursive;
+}
+.textDecorName {
+    font-size: 5rem;
+    font-family: "Permanent Marker", cursive;
+    color: #86a873;
+}
+
+.boldGreenTitle {
+    color: #86a873;
+    font-weight: bold;
+}
+.greenTitle {
+    color: #86a873;
+}
+
+.border-lightGreen {
+    border-right: 1px solid #86a873;
+}
+
+.text-white {
+    color: white;
+}
+.text-white-bold {
+    color: white;
+    font-weight: bold;
+}
+
+#sobre {
+    /* text-align: right; */
+}
+
+li {
+    margin: 0.5rem 0rem;
+    list-style-type: none;
+    text-align: start;
+}
+
+.carousel-indicators {
+    bottom: -10px;
+}
+
+.mb-6 {
+    margin-bottom: 6rem;
+}
+.mt-6 {
+    margin-top: 6rem;
+}
+
+.inputLabel {
+    margin-left: 12px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
+    -webkit-box-shadow: 2px -1px 36px 8px #000000;
+    box-shadow: 0px -5px 36px 8px rgba(0, 0, 0, 0.2);
+}
+.nav-link {
+    color: black !important;
+}
+.nav-link:hover {
+    color: rgb(67, 88, 55) !important;
+}
+.navbar-brand {
+    color: black !important;
+}
+.navbar-brand:hover {
+    color: rgb(134, 168, 115) !important;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+a,
+li {
+    font-family: "Nunito", sans-serif;
+}
+
+.bg-darkGreen {
+    background-color: rgb(67, 88, 55);
+}
+
+.card {
+    border: 1px solid rgba(67, 88, 55, 0.3);
+}
+
+.bg-darkLeafs {
+    background-image: url("../img/leafs-bg.jpg");
+    background-position: center;
+    background-size: contain;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    /* background-color: rgba(67, 88, 55, 0.3); */
+}
+
+.commentButton {
+    width: 150px;
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.commentButton:hover {
+    width: 150px;
+    background-color: #86a873;
+    color: white;
+}
+.contactButton {
+    width: 150px;
+    background-color: black;
+    color: white;
+}
+.contactButton:hover {
+    width: 150px;
+    background-color: rgb(134, 168, 115);
+    color: white;
+}
+
+.form-control:focus {
+    /* color: rgb(134, 168, 115); */
+    border-color: rgb(134, 168, 115) !important;
+    box-shadow: 0 0 0 0.25rem rgba(134, 168, 115, 0.25);
+}
+.btn-outline-light:focus {
+    box-shadow: 0 0 0 0.25rem rgba(134, 168, 115, 0.25);
+}
+
+.social-icon {
+    height: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    /* filter: brightness(0) saturate(100%); */
+}
+
+/* .carousel-item.active {
+    display: flex;
+    justify-content: center;
+} */
+
+#sobreAnchor {
+    position: absolute;
+    top: 660px;
+}
+
+@media (max-width: 1400px) {
+    #sobreAnchor {
+        position: absolute;
+        top: 580px;
+    }
+}
+@media (max-width: 1200px) {
+    #sobreAnchor {
+        position: absolute;
+        top: 500px;
+    }
+}
+
+@media (max-width: 990px) {
+    #sobreAnchor {
+        position: absolute;
+        top: 385px;
+    }
+}
+
+@media (max-width: 766px) {
+    #sobreAnchor {
+        position: absolute;
+        top: 350px;
+    }
+}
+
+#portfolioAnchor {
+    position: absolute;
+    top: 1120px;
+}
+@media (max-width: 766px) {
+    #portfolioAnchor {
+        position: absolute;
+        top: 1280px;
+    }
+}
+
+#comentarioAnchor {
+    position: absolute;
+    top: 2280px;
+}
+
+@media (max-width: 1400px) {
+    #comentarioAnchor {
+        position: absolute;
+        top: 2110px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #comentarioAnchor {
+        position: absolute;
+        top: 2010px;
+    }
+}
+@media (max-width: 990px) {
+    #comentarioAnchor {
+        position: absolute;
+        top: 2110px;
+    }
+}
+
+@media (max-width: 766px) {
+    #comentarioAnchor {
+        position: absolute;
+        top: 2570px;
+    }
+}

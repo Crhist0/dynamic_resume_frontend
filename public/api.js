@@ -1,16 +1,20 @@
-const api = axios.create({
-    baseURL: "https://api-growdevers-crhist0.herokuapp.com/",
-});
+//TODO: adicionar classe .active para links navbars que forem clicados
 
-api.get("/")
-    .then((result) => {
-        console.log(result.data);
-        for (const user of result.data.data) {
-            document.getElementById("lista").innerHTML += `
-            <li>${user.nome} - ${user.turma}</li>            
-            `;
-        }
-    })
-    .catch((err) => {
-        console.log("erro?");
+// const axios = require("axios");
+
+function dev() {
+    let name = document.getElementById("commentComment").value;
+    let comment = document.getElementById("commentName").value;
+    console.log(name + " : " + comment);
+
+    axios({
+        method: "post",
+        url: "/comments",
+        data: {
+            name,
+            comment,
+        },
+    }).then((res) => {
+        console.log({ res });
     });
+}

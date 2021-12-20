@@ -1,19 +1,440 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Growdevers</title>
+    <title>Dynamic Resume</title>
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <h1>Bem vindo!</h1>
-    <ul id="lista"></ul>
+    <!-- navbar block -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ps-5 pe-5">
+        <div class="container-fluid">
+            <a class="navbar-brand textDecorNav" href="#">Crhistian</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
 
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#sobreAnchor">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolioAnchor">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comentarioAnchor">Comentários</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contatoAnchor">Contato</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- fim navbar -->
+
+    <!-- hi block -->
+    <div class="container mt-5 mb-5">
+        <div class="row" style="margin-top: 86px;">
+            <div class="col-6 p-5">
+                <img id="hiBlockImg" src="./img/hiBlockImg.jpeg">
+            </div>
+            <div class="col-5 offset-1 d-flex align-items-center">
+                <h1 id="hiBlockText" class="h2">
+                    Olá, eu sou o
+                    <br>
+                    <strong class="textDecorName ">Crhis</strong>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!-- fim hi -->
+
+    <!-- sobre block -->
+    <div class="container-fluid bg-darkGreen pt-4 pb-4">
+        <div class="container mt-5 mb-6 ">
+            <div class="row d-flex">
+                <div class="col-6 d-flex flex-column pe-5 align-items-start border-lightGreen">
+                    <h2 id="sobre" class="boldGreenTitle">Sobre</h2>
+                    <p class="mb-0 text-white pe-5">
+                        Sou um desenvolvedor Web full-stack em formação pela GrowDev, e apaixonado por
+                        tecnologia e pelo meu cachorro Bread Pitt.
+                        <br>
+                        Tenho formação em comunicação social com habilitação em publicidade e propaganda, mais
+                        de 3 anos de
+                        experiência com trabalho em equipe e comunicação, e gosto de aplicar conceitos como empatia e
+                        lógica
+                        tanto no âmbito profissional quanto no pessoal.
+                        <br>
+                        Como lazer, gosto de passar o tempo com jogos de computador, assistir a filmes e
+                        seriados, e também
+                        gosto muito de cozinhar - quase tanto quanto comer.
+                    </p>
+                </div>
+                <div class="col-4 d-flex flex-column align-items-center  ps-5">
+
+
+                    <h2 id="sobre" class="boldGreenTitle ps-5">Conhecimentos</h2>
+                    <div class="d-flex align-items-center justify-content-center ">
+                        <ul class="ps-5 text-white-bold">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                        </ul>
+                        <ul class="text-white-bold ms-4">
+                            <li>Bootstrap</li>
+                            <li>Heroku</li>
+                            <li>REST Api</li>
+                            <li>PostgresSQL</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-2"></div>
+
+            </div>
+        </div>
+    </div>
+    <!-- fim sobre  -->
+
+    <!-- portfolio block -->
+    <div class="container mt-6 mb-6">
+        <div class="row">
+            <div class="col-12">
+                <h2 id="portfolio" class="boldGreenTitle">Portfolio</h2>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3">
+
+            <!-- projeto 1 -->
+            <div class="container card rounded mt-2" style="padding-left: 0px; padding-right: 0px;">
+                <div class="row ">
+
+                    <div class="col-7 d-flex flex-column justify-content-center">
+                        <div class="pt-2 pb-2 ps-5 pe-5">
+                            <h6 id="" class="card-title greenTitle"> <strong>Pokemon Memory Game</strong> </h6>
+                            <p class="cart-text">
+                                Um jogo da memória com dificuldades e ranking.
+                                <br>
+                                Projeto feito para prática das linguagens HTML, CSS e JavaScript, com servidor backend e
+                                deploy
+                                da
+                                aplicação na plataforma Heroku, e integração com banco de dados PostgresSQL via add-on
+                                (Heroku
+                                Postgres).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-5 ">
+                        <a href="https://bit.ly/PokemonMemoryGame">
+                            <img class="col-12 portfolio-img rounded-end" style="padding-left: 0px; padding-right: 0px;"
+                                src="./img/pokemon-memory-game-img3.png" alt="Pokemon memory game">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- fim projeto 1 -->
+
+            <!-- projeto 2 -->
+            <div class="container card rounded mt-5" style="padding-left: 0px; padding-right: 0px;">
+                <div class="row ">
+
+                    <div class="col-5 ">
+                        <a href="http://bitly.com/SpearowInvaders" target="_blank">
+                            <img class="col-12 portfolio-img rounded-start"
+                                style="padding-left: 0px; padding-right: 0px;" src="./img/spearow-invaders-img3.png"
+                                alt="Pokemon memory game">
+                        </a>
+                    </div>
+
+                    <div class="col-7 d-flex flex-column justify-content-center">
+                        <div class="pt-2 pb-2 ps-5 pe-5">
+                            <h6 id="" class="card-title greenTitle"> <strong>Spearow Invaders</strong> </h6>
+                            <p class="cart-text">
+                                Um jogo baseado em "space-invaders" que faz alusão a cena em que o
+                                Pikachu salva Ash
+                                dos spearows.
+                                <br>
+                                Projeto feito para prática das linguagens HTML, CSS e JavaScript, com servidor backend e
+                                deploy
+                                da
+                                aplicação na plataforma Heroku.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <!-- fim projeto 2 -->
+
+            <!-- projeto 3 -->
+            <div class="container card rounded mt-5" style="padding-left: 0px; padding-right: 0px;">
+                <div class="row ">
+
+                    <div class="col-7 d-flex flex-column justify-content-center">
+                        <div class="pt-2 pb-2 ps-5 pe-5">
+                            <h6 id="" class="card-title greenTitle"> <strong>Lista de tarefas</strong> </h6>
+                            <p class="cart-text">
+                                Uma lista de tarefas com login/senha e servidor backend.
+                                <br>
+                                Projeto feito para prática das linguagens HTML, CSS, JavaScript e Bootstrap, com
+                                servidor backend e
+                                deploy da aplicação na plataforma Heroku.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-5 ">
+                        <a href="https://tasklist-front-crhist0.herokuapp.com/index.html" target="_blank">
+                            <img class="col-12 portfolio-img rounded-end" style="padding-left: 0px; padding-right: 0px;"
+                                src="./img/task-list-img1.png" alt="Pokemon memory game">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- fim projeto 3 -->
+        </div>
+    </div>
+    <!-- fim portfolio  -->
+
+    <!-- comentarios block -->
+    <div class="container-fluid bg-darkLeafs">
+        <div class="container mt-5 text-white">
+            <div class="row">
+                <div class="col-12 ">
+                    <h2 id="portfolio" class="boldGreenTitle">Comentários</h2>
+                </div>
+            </div>
+            <div class="row">
+
+                <div id="carouselComentarios" class="carousel slide" data-bs-ride="carousel" style="height: 300px;">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselComentarios" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselComentarios" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselComentarios" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card-body d-flex flex-column justify-content-center"
+                                style="padding: 3rem 8rem;">
+                                <h5 class="card-title">Nam quis nulla. Integer malesuada. In in enim a ar</h5>
+                                <h6 class="card-subtitle mb-2 text-muted text-end">19/12/2021</h6>
+                                <hr style="width: 100%;">
+                                <p class="card-text">Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet
+                                    malesuada.
+                                    Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem.
+                                    Phasellus
+                                    rhoncus. Aenean id metus id velit ullamcorper pulvinar. </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-body d-flex flex-column justify-content-center"
+                                style="padding: 3rem 8rem;">
+                                <h5 class="card-title">Crhistian</h5>
+                                <h6 class="card-subtitle mb-2 text-muted text-end">19/12/2021</h6>
+                                <hr style="width: 100%;">
+                                <p class="card-text">Muito bom, adorei os trabalhos.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-body d-flex flex-column justify-content-center"
+                                style="padding: 3rem 8rem;">
+                                <h5 class="card-title">Nam quis nulla. Integer malesuada. In in enim a ar</h5>
+                                <h6 class="card-subtitle mb-2 text-muted text-end">19/12/2021</h6>
+                                <hr style="width: 100%;">
+                                <p class="card-text">Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet
+                                    malesuada.
+                                    Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem.
+                                    Phasellus
+                                    rhoncus. Aenean id metus id velit ullamcorper pulvinar. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselComentarios"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselComentarios"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <!-- formularios block -->
+        <div class="container mt-6">
+            <div class="row">
+                <div class="col-10 offset-1">
+
+
+                    <form>
+                        <div class="row">
+                            <h4 class="text-white">Deixe seu comentário:</h4>
+                            <div class="form-floating  ">
+                                <input maxlength="50" type="text" class="form-control text-white" id="commentName"
+                                    style="background-color: transparent;" placeholder="João da Silva...">
+                                <label for="commentName" class="inputLabel text-white">Nome</label>
+                            </div>
+                            <div class="form-floating mt-2 ">
+                                <textarea maxlength="500" class="form-control text-white"
+                                    placeholder="Leave a comment here" id="commentComment"
+                                    style="height: 100px; background-color: transparent"></textarea>
+                                <label for="commentComment" class="inputLabel text-white">Comentário</label>
+                            </div>
+                            <div class="d-flex justify-content-end mt-3">
+                                <button type="button" class="btn btn-outline-light commentButton"
+                                    onclick="dev()">Enviar</button>
+                            </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!-- fim formularios -->
+    </div>
+    </div>
+    <!-- fim comentarios  -->
+
+
+    <!-- contato block -->
+    <div id="contatoAnchor" class="container mt-5 mb-6">
+        <div class="row">
+            <div class="col-12 ">
+                <h2 id="portfolio" class="boldGreenTitle">Entre em contato</h2>
+            </div>
+        </div>
+        <div class="row">
+
+
+            <div class="col-5">
+
+                <p class="">
+                    Obrigado por ter chegado até aqui. Para falar comigo, por gentileza, preencha o formulário ao lado e
+                    entrarei em contato o mais breve
+                    possível.
+                    <br>
+                    Ou me chame em qualquer das redes sociais abaixo:
+                </p>
+                <div id="socialLinks">
+                    <!-- inserir links -->
+                    <a href=""><img src="./img/linkedin-icon.png" alt="linkedin" class="social-icon"></a>
+                    <a href=""><img src="./img/github-icon.png" alt="github" class="social-icon"></a>
+                    <a href=""><img src="./img/instagram-icon.png" alt="instagram" class="social-icon"></a>
+                </div>
+
+            </div>
+
+
+
+            <div class="col-5 offset-2">
+
+
+                <form>
+                    <div class="row">
+                        <!-- <h4>Deixe seus dados e entrarei em contato:</h4> -->
+                        <div class="form-floating col-12">
+                            <input maxlength="50" type="text" class="form-control" id="contactName"
+                                placeholder="João da Silva...">
+                            <label for="contactName" class="inputLabel">Nome</label>
+                        </div>
+                        <div class="form-floating col-12 mt-3">
+                            <input maxlength="15" type="text" class="form-control" id="contactPhone"
+                                placeholder="(99) 9 9999-9999...">
+                            <label for="contactPhone" class="inputLabel">Telefone/WhatsApp</label>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex align-items-end">
+
+
+                        <div class="col-8">
+                            <div class="form-group mt-2">
+                                <label for="contactPrefersContactBy" class="inputLabel mb-1">Como prefere ser
+                                    contatado?</label>
+                                <select class="form-control" id="contactPrefersContactBy">
+                                    <option value="phone">Telefone</option>
+                                    <option value="=whats">WhatsApp</option>
+                                    <option value="email">E-mail</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-3 offset-1">
+                            <div class=" d-flex justify-content-end mt-3">
+                                <button type="button" class="btn btn-outline-light contactButton">Enviar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <!-- fim contato -->
+
+
+    <!-- nav anchors -->
+    <div id="sobreAnchor">
+        <p style="display: none;">sobreAnchor</p>
+    </div>
+    <div id="portfolioAnchor">
+        <p style="display: none;">portfolioAnchor</p>
+    </div>
+    <div id="comentarioAnchor">
+        <p style="display: none;">comentarioAnchor</p>
+    </div>
+    <!-- fim anchors -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script src="./api.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./api.js"></script> -->
 </body>
 
 </html>
