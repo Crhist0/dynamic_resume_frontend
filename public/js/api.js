@@ -1,7 +1,7 @@
 //TODO: adicionar classe .active para links navbars que forem clicados
 
 const api = axios.create({
-    baseURL: "http://localhost:8081",
+    baseURL: "https://curriculo-crhist0.herokuapp.com",
 });
 
 // funções de criação de comentário e contato

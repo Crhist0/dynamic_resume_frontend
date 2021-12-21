@@ -1,7 +1,7 @@
 // em construção
 
 const api = axios.create({
-    baseURL: "http://localhost:8081",
+    baseURL: "https://curriculo-crhist0.herokuapp.com",
 });
 
 // funções para tratar resposta da api
