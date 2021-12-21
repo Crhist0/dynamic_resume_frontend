@@ -92,7 +92,7 @@ class CreateCommentsCarousel {
                     <div class="d-flex justify-content-center">
                     ${createApproveButton(comment.uid)}
                     ${createUnapproveButton(comment.uid)}
-                    ${createDeleteeButton(comment.uid)}
+                    ${createDeleteButton(comment.uid)}
 
                     </div>
                 </div>
@@ -106,7 +106,7 @@ class CreateCommentsCarousel {
             <div class="d-flex justify-content-center">
             ${createApproveButton(comment.uid)}
             ${createUnapproveButton(comment.uid)}
-            ${createDeleteeButton(comment.uid)}
+            ${createDeleteButton(comment.uid)}
             
             </div>
         </div>
@@ -142,7 +142,7 @@ function createUnapproveButton(uid) {
     
     `;
 }
-function createDeleteeButton(uid) {
+function createDeleteButton(uid) {
     return `
  
         <button onclick="deleteComment('${uid}')" id="deleteCommentButton" type="button" class="btn btn-outline-light contactButton">Apagar</button>
@@ -212,7 +212,7 @@ function printContact(contact) {
             <p class="card-text">E-mail: ${contact.email}</p>
             <p class="card-text">Prefere contato por: ${contact.prefers_contact_by}</p>
             <div class=" d-flex justify-content-center mt-3">
-            <button onclick="archiveContact('${contact.uid}')" id="approveCommentButton" data-index="1" type="button" class="btn btn-outline-light contactButton">Apagar</button>
+            <button onclick="archiveContact('${contact.uid}')" id="approveCommentButton" data-index="1" type="button" class="btn btn-outline-light contactButton">Arquivar</button>
         </div>
         </div>
     </div>
