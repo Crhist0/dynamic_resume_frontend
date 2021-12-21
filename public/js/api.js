@@ -182,7 +182,7 @@ function admAreaIn() {
             })
                 .then((res) => {
                     showOkMessage(res).then(() => {
-                        window.location.pathname = "/public/admin/index.html";
+                        window.location.pathname = "/admin/index.html";
                     });
                 })
                 .catch((err) => {
