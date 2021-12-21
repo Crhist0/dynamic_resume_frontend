@@ -96,7 +96,7 @@ li {
 }
 
 .card {
-    border: 1px solid rgba(67, 88, 55, 0.3);
+    border: none;
 }
 
 .bg-darkLeafs {
@@ -147,14 +147,23 @@ li {
     /* filter: brightness(0) saturate(100%); */
 }
 
-/* .carousel-item.active {
-    display: flex;
-    justify-content: center;
-} */
+.portfolioBoxShadow {
+    -webkit-box-shadow: 0px 10px 13px -7px rgba(67, 88, 55, 0.3), 0px 0px 50px -30px rgba(67, 88, 55, 0.3);
+    box-shadow: 0px 10px 13px -7px rgba(67, 88, 55, 0.3), 0px 0px 50px -30px rgba(67, 88, 55, 0.3);
+}
 
+/* anchors */
 #sobreAnchor {
     position: absolute;
     top: 660px;
+}
+#portfolioAnchor {
+    position: absolute;
+    top: 1120px;
+}
+#comentarioAnchor {
+    position: absolute;
+    top: 2280px;
 }
 
 @media (max-width: 1400px) {
@@ -162,67 +171,43 @@ li {
         position: absolute;
         top: 580px;
     }
+    #comentarioAnchor {
+        position: absolute;
+        top: 2110px;
+    }
 }
 @media (max-width: 1200px) {
     #sobreAnchor {
         position: absolute;
         top: 500px;
     }
-}
-
-@media (max-width: 990px) {
-    #sobreAnchor {
-        position: absolute;
-        top: 385px;
-    }
-}
-
-@media (max-width: 766px) {
-    #sobreAnchor {
-        position: absolute;
-        top: 350px;
-    }
-}
-
-#portfolioAnchor {
-    position: absolute;
-    top: 1120px;
-}
-@media (max-width: 766px) {
-    #portfolioAnchor {
-        position: absolute;
-        top: 1280px;
-    }
-}
-
-#comentarioAnchor {
-    position: absolute;
-    top: 2280px;
-}
-
-@media (max-width: 1400px) {
-    #comentarioAnchor {
-        position: absolute;
-        top: 2110px;
-    }
-}
-
-@media (max-width: 1200px) {
     #comentarioAnchor {
         position: absolute;
         top: 2010px;
     }
 }
 @media (max-width: 990px) {
+    #sobreAnchor {
+        position: absolute;
+        top: 385px;
+    }
     #comentarioAnchor {
         position: absolute;
         top: 2110px;
     }
 }
-
 @media (max-width: 766px) {
+    #sobreAnchor {
+        position: absolute;
+        top: 350px;
+    }
+    #portfolioAnchor {
+        position: absolute;
+        top: 1280px;
+    }
     #comentarioAnchor {
         position: absolute;
         top: 2570px;
     }
 }
+/* fim anchors */

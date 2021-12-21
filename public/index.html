@@ -7,18 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Resume</title>
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-
+    <!-- stylesheets, frameworks e fontes -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Permanent+Marker&display=swap"
         rel="stylesheet">
-
-
     <link rel="stylesheet" href="./css/style.css">
+    <!-- fim stylesheets -->
 </head>
 
 <body>
@@ -45,6 +42,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contatoAnchor">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="admArea" style="cursor: pointer;">Admin area</a>
                     </li>
 
                 </ul>
@@ -128,7 +128,7 @@
         <div class="row d-flex justify-content-center mt-3">
 
             <!-- projeto 1 -->
-            <div class="container card rounded mt-2" style="padding-left: 0px; padding-right: 0px;">
+            <div class="container card rounded mt-2 portfolioBoxShadow" style="padding-left: 0px; padding-right: 0px;">
                 <div class="row ">
 
                     <div class="col-7 d-flex flex-column justify-content-center">
@@ -148,7 +148,7 @@
                     </div>
 
                     <div class="col-5 ">
-                        <a href="https://bit.ly/PokemonMemoryGame">
+                        <a href="https://bit.ly/PokemonMemoryGame" target="_blank">
                             <img class="col-12 portfolio-img rounded-end" style="padding-left: 0px; padding-right: 0px;"
                                 src="./img/pokemon-memory-game-img3.png" alt="Pokemon memory game">
                         </a>
@@ -160,7 +160,7 @@
             <!-- fim projeto 1 -->
 
             <!-- projeto 2 -->
-            <div class="container card rounded mt-5" style="padding-left: 0px; padding-right: 0px;">
+            <div class="container card rounded mt-5 portfolioBoxShadow" style="padding-left: 0px; padding-right: 0px;">
                 <div class="row ">
 
                     <div class="col-5 ">
@@ -194,7 +194,7 @@
             <!-- fim projeto 2 -->
 
             <!-- projeto 3 -->
-            <div class="container card rounded mt-5" style="padding-left: 0px; padding-right: 0px;">
+            <div class="container card rounded mt-5 portfolioBoxShadow" style="padding-left: 0px; padding-right: 0px;">
                 <div class="row ">
 
                     <div class="col-7 d-flex flex-column justify-content-center">
@@ -236,50 +236,11 @@
             <div class="row">
 
                 <div id="carouselComentarios" class="carousel slide" data-bs-ride="carousel" style="height: 300px;">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselComentarios" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselComentarios" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselComentarios" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+                    <div class="carousel-indicators" id="indicatorsButton">
+                        <!-- botoes vao aqui -->
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card-body d-flex flex-column justify-content-center"
-                                style="padding: 3rem 8rem;">
-                                <h5 class="card-title">Nam quis nulla. Integer malesuada. In in enim a ar</h5>
-                                <h6 class="card-subtitle mb-2 text-muted text-end">19/12/2021</h6>
-                                <hr style="width: 100%;">
-                                <p class="card-text">Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet
-                                    malesuada.
-                                    Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem.
-                                    Phasellus
-                                    rhoncus. Aenean id metus id velit ullamcorper pulvinar. </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-body d-flex flex-column justify-content-center"
-                                style="padding: 3rem 8rem;">
-                                <h5 class="card-title">Crhistian</h5>
-                                <h6 class="card-subtitle mb-2 text-muted text-end">19/12/2021</h6>
-                                <hr style="width: 100%;">
-                                <p class="card-text">Muito bom, adorei os trabalhos.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-body d-flex flex-column justify-content-center"
-                                style="padding: 3rem 8rem;">
-                                <h5 class="card-title">Nam quis nulla. Integer malesuada. In in enim a ar</h5>
-                                <h6 class="card-subtitle mb-2 text-muted text-end">19/12/2021</h6>
-                                <hr style="width: 100%;">
-                                <p class="card-text">Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet
-                                    malesuada.
-                                    Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem.
-                                    Phasellus
-                                    rhoncus. Aenean id metus id velit ullamcorper pulvinar. </p>
-                            </div>
-                        </div>
+                    <div class="carousel-inner" id="carousel-innerComents">
+                        <!-- comentarios vao aqui -->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselComentarios"
                         data-bs-slide="prev">
@@ -316,8 +277,8 @@
                                 <label for="commentComment" class="inputLabel text-white">Comentário</label>
                             </div>
                             <div class="d-flex justify-content-end mt-3">
-                                <button type="button" class="btn btn-outline-light commentButton"
-                                    onclick="dev()">Enviar</button>
+                                <button id="commentSendButton" type="button"
+                                    class="btn btn-outline-light commentButton">Enviar</button>
                             </div>
                     </form>
 
@@ -339,8 +300,8 @@
         </div>
         <div class="row">
 
-
-            <div class="col-5">
+            <!-- social media links -->
+            <div class="col-5 d-flex flex-column justify-content-center">
 
                 <p class="">
                     Obrigado por ter chegado até aqui. Para falar comigo, por gentileza, preencha o formulário ao lado e
@@ -351,15 +312,18 @@
                 </p>
                 <div id="socialLinks">
                     <!-- inserir links -->
-                    <a href=""><img src="./img/linkedin-icon.png" alt="linkedin" class="social-icon"></a>
-                    <a href=""><img src="./img/github-icon.png" alt="github" class="social-icon"></a>
-                    <a href=""><img src="./img/instagram-icon.png" alt="instagram" class="social-icon"></a>
+                    <a href="https://www.linkedin.com/in/crhistian-de-oliveira-b35841161/" target="_blank"><img
+                            src="./img/linkedin-icon.png" alt="linkedin" class="social-icon"></a>
+                    <a href="https://github.com/Crhist0" target="_blank"><img src="./img/github-icon.png" alt="github"
+                            class="social-icon"></a>
+                    <a href="https://www.instagram.com/crhis_tchan/" target="_blank"><img src="./img/instagram-icon.png"
+                            alt="instagram" class="social-icon"></a>
                 </div>
 
             </div>
 
 
-
+            <!-- formulário contato -->
             <div class="col-5 offset-2">
 
 
@@ -376,6 +340,13 @@
                                 placeholder="(99) 9 9999-9999...">
                             <label for="contactPhone" class="inputLabel">Telefone/WhatsApp</label>
                         </div>
+
+                        <div class="form-floating col-12 mt-3">
+                            <input maxlength="50" type="email" class="form-control" id="contactMail"
+                                placeholder="exemplo@ex.com...">
+                            <label for="contactPhone" class="inputLabel">E-mail</label>
+                        </div>
+
                     </div>
                     <div class="col-12 d-flex align-items-end">
 
@@ -386,7 +357,7 @@
                                     contatado?</label>
                                 <select class="form-control" id="contactPrefersContactBy">
                                     <option value="phone">Telefone</option>
-                                    <option value="=whats">WhatsApp</option>
+                                    <option value="whats">WhatsApp</option>
                                     <option value="email">E-mail</option>
                                 </select>
                             </div>
@@ -394,7 +365,8 @@
 
                         <div class="col-3 offset-1">
                             <div class=" d-flex justify-content-end mt-3">
-                                <button type="button" class="btn btn-outline-light contactButton">Enviar</button>
+                                <button id="contactSendButton" type="button"
+                                    class="btn btn-outline-light contactButton">Enviar</button>
                             </div>
                         </div>
 
@@ -423,6 +395,7 @@
     <!-- fim anchors -->
 
 
+    <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
     </script>
@@ -430,11 +403,10 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/api.js"></script>
+    <!-- fim scripts -->
 
-    <script src="./api.js"></script>
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./api.js"></script> -->
 </body>
 
 </html>
