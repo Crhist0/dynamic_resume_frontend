@@ -1,7 +1,7 @@
 // em construção
 
 const api = axios.create({
-    baseURL: "https://curriculo-crhist0.herokuapp.com",
+    baseURL: "https://curriculo-crhist0.herokuapp.com/",
 });
 
 // funções para tratar resposta da api
@@ -30,7 +30,7 @@ function showErrorMessage(res) {
 function populateCommentsUnapproved() {
     api({
         method: "get",
-        url: "/comments-dev",
+        url: "/comments-dev?approved=false",
     })
         .then((res) => {
             let comments = res.data.data;
@@ -39,6 +39,7 @@ function populateCommentsUnapproved() {
             let index = 0;
             for (const comment of comments) {
                 let thisComment = new CreateCommentsCarousel(index, comment);
+                console.log(thisComment.uid);
                 document.getElementById("indicatorsButton").innerHTML += thisComment.button;
                 document.getElementById("carousel-innerComents").innerHTML += thisComment.comment;
                 index++;
@@ -53,7 +54,7 @@ function populateCommentsUnapproved() {
 function populateCommentsApproved() {
     api({
         method: "get",
-        url: "/comments",
+        url: "/comments-dev?approved=true",
     })
         .then((res) => {
             let comments = res.data.data;
@@ -73,7 +74,6 @@ function populateCommentsApproved() {
         });
 }
 
-// funções fábrica
 class CreateCommentsCarousel {
     constructor(index, comment) {
         this.index = index;
@@ -89,7 +89,12 @@ class CreateCommentsCarousel {
                     <h6 class="card-subtitle mb-2 text-muted text-end">${dateFormatter(comment.created_at)}</h6>
                     <hr style="width: 100%;">
                     <p class="card-text">${comment.comment}</p>
+                    <div class="d-flex justify-content-center">
                     ${createApproveButton(comment.uid)}
+                    ${createUnapproveButton(comment.uid)}
+                    ${createDeleteeButton(comment.uid)}
+
+                    </div>
                 </div>
             </div>`
                 : `<div class="carousel-item">
@@ -98,7 +103,12 @@ class CreateCommentsCarousel {
             <h6 class="card-subtitle mb-2 text-muted text-end">${dateFormatter(comment.created_at)}</h6>
             <hr style="width: 100%;">
             <p class="card-text">${comment.comment}</p>
+            <div class="d-flex justify-content-center">
             ${createApproveButton(comment.uid)}
+            ${createUnapproveButton(comment.uid)}
+            ${createDeleteeButton(comment.uid)}
+            
+            </div>
         </div>
     </div>`;
     }
@@ -120,17 +130,78 @@ function dateFormatter(date) {
 
 function createApproveButton(uid) {
     return `
-    <div class=" d-flex justify-content-center mt-3">
-        <button onclick="approveContact()" id="approveContactButton" data-index="${uid}" type="button" class="btn btn-outline-light contactButton">Aprovar</button>
-    </div>
+    
+        <button onclick="approveComment('${uid}')" id="approveCommentButton" type="button" class="btn btn-outline-light contactButton me-3">Aprovar</button>
+
+    `;
+}
+function createUnapproveButton(uid) {
+    return `
+ 
+        <button onclick="unapproveComment('${uid}')" id="approveCommentButton" type="button" class="btn btn-outline-light contactButton me-3">Desaprovar</button>
+    
+    `;
+}
+function createDeleteeButton(uid) {
+    return `
+ 
+        <button onclick="deleteComment('${uid}')" id="deleteCommentButton" type="button" class="btn btn-outline-light contactButton">Apagar</button>
+    
     `;
 }
 
-// função de aprovar contato
-function approveContact() {}
+function approveComment(uid) {
+    api({
+        method: "put",
+        url: "/comments",
+        data: {
+            uid,
+        },
+    })
+        .then((res) => {
+            console.log({ res });
+            populateCommentsUnapproved();
+            populateCommentsApproved();
+        })
+        .catch((err) => {
+            console.log({ err });
+        });
+}
 
-// populateCommentsApproved();
-// populateCommentsUnapproved();
+function unapproveComment(uid) {
+    api({
+        method: "put",
+        url: "/comments-dev",
+        data: {
+            uid,
+        },
+    })
+        .then((res) => {
+            console.log({ res });
+            populateCommentsUnapproved();
+            populateCommentsApproved();
+        })
+        .catch((err) => {
+            console.log({ err });
+        });
+}
+
+function deleteComment(uid) {
+    api({
+        method: "delete",
+        url: `/comments?uid=${uid}`,
+    })
+        .then((res) => {
+            console.log({ res });
+            populateCommentsUnapproved();
+            populateCommentsApproved();
+        })
+        .catch((err) => {
+            console.log({ err });
+        });
+}
+
+//  funções do contato
 
 function printContact(contact) {
     return `
@@ -141,7 +212,7 @@ function printContact(contact) {
             <p class="card-text">E-mail: ${contact.email}</p>
             <p class="card-text">Prefere contato por: ${contact.prefers_contact_by}</p>
             <div class=" d-flex justify-content-center mt-3">
-            <button onclick="archiveContact('${contact.uid}')" id="approveContactButton" data-index="1" type="button" class="btn btn-outline-light contactButton">Apagar</button>
+            <button onclick="archiveContact('${contact.uid}')" id="approveCommentButton" data-index="1" type="button" class="btn btn-outline-light contactButton">Apagar</button>
         </div>
         </div>
     </div>
@@ -188,3 +259,5 @@ function getContacts() {
 }
 
 getContacts();
+populateCommentsUnapproved();
+populateCommentsApproved();

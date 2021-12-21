@@ -1,5 +1,3 @@
-//TODO: adicionar classe .active para links navbars que forem clicados
-
 const api = axios.create({
     baseURL: "https://curriculo-crhist0.herokuapp.com",
 });
@@ -83,7 +81,7 @@ function populateComments() {
     // url "/comments" = todos
     api({
         method: "get",
-        url: `/comments`,
+        url: `/comments-dev?approved=true`,
     })
         .then((res) => {
             let comments = res.data.data;
